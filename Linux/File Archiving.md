@@ -1,0 +1,25 @@
+- ### Creating archives with `tar`:
+- `tar` (Tape Archive) → For compressing, extracting, and archiving files and directories. Commonly used for backups and transferring large sets of files
+- 
+- `c` = create
+- `v` = Verbose (show us what it's doing)
+- `f` = Filename of the tar file has to come after this option (Must have a name)
+- 
+- Syntax: `tar [options] <New_file.tar> <target_file.txt>` 
+- Example: `tar -cvf sample_tar_file.tar sample.txt` 
+- 
+- NOTE: The `-f` flag MUST be followed by the archive name, the order of the other flags doesn't matter  
+- ### Creating Zip archives:
+- 
+- `z` = Creates a compressed zip file
+- (sample in this case is a directory)
+- Example: `tar -cvzf sample_tar_file.tar.gz sample` 
+- 
+- Use `file` to check if the created file is actually a zip and not an archive with double extensions
+- Example: `file sample_tar_file.tar.gz` 
+- 
+- ### Unpacking Archives with `tar`:
+- `x` = extract
+- 
+- Syntax: `tar [options] <target_file_to_unpack>` 
+- `tar -xvf sample_tar_file.tar`
