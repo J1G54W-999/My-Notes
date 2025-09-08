@@ -13,6 +13,93 @@
     </body>
 </html>
 ```
+---
+### Navigation Bar: 
+- Made from an unordered list `<ul> </ul>` formatted sideways
+- Add it into the `<body> </body>` section of each page
+- Use the `<nav> </nav>` tags to enable screen readers to identify navigation areas
+- Change formatting with `external css` to keep code tidy
+
+#### Example: Basic
+```
+    <!DOCTYPE html>
+<html>
+    <head>
+        <title>This text will appear in the browser tab.</title>
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            display: inline;
+        }
+    </style>
+    </head>
+    <body>
+        <h1>Basic Heading.</h1>
+        <p>The navigation bar is shown below.</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </body>
+</html>
+```
+
+#### Example: Dynamic
+```
+    <!DOCTYPE html>
+<html>
+    <head>
+        <title>This text will appear in the browser tab.</title>
+        <style>
+              .nav ul { 
+                  list-style-type: none; 
+                  margin: 0; 
+                  padding: 0; 
+                  overflow: hidden; 
+                  background-color: black; 
+              } 
+             
+              .nav ul li { 
+                  float: left; 
+              } 
+             
+              .nav ul li a { 
+                  display: block; 
+                  color: white; 
+                  text-align: center; 
+                  padding: 14px 16px; 
+                  text-decoration: none; 
+              } 
+             
+              .nav ul li a:hover { 
+                  background-color: green; 
+              } 
+        </style> 
+    </head>
+    <body>
+        <h1>Your heading goes here.</h1>
+        <p>Your content goes here.</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </body>
+</html>
+```
+- When styling, elements nested within `<nav>` tags can be targeted using a compound selector
+- So `<nav>` is the outermost layer > followed by `<nav> <ul>` and `<nav> <ul> <li> <a>` is the innermost layer
+#### NOTE: You may need to clear you cache `Ctrl + F5` if changes are displaying in the browser
+---
 ### Comments:
 #### Syntax: `<!-- Your comment goes here -->` 
 ```
